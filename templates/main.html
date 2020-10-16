@@ -4,18 +4,6 @@
     <!-- basic.html -->
     <title>School</title>
     <meta charset = "UTF-8" />
-    <script>
-        $(function() {
-          $('a#test').on('click', function(e) {
-            e.preventDefault()
-            $.getJSON('/background_process_test',
-                function(data) {
-              //do nothing
-            });
-            return false;
-          });
-        });
-    </script>
     <style>
         body {
             background-color: lightblue;
@@ -40,6 +28,21 @@
         <p>Please put the assignment name here</p>
         <input type = "text" id = "myText" value = ""/>
         <p>Please put due date here</p>
+        <script>
+        $(function() {
+          $('a#test').bind('click', function() {
+            $.getJSON('/background_process_test',
+                function(data) {});
+            return false;
+          });
+        });
+        </script>
+         <div class='container'>
+            <h3>Test</h3>
+            <form>
+                <a href=# id=test><button class='btn btn-default'>Test</button></a>
+            </form>
+         </div>
     </center>
 </body>
 </html>

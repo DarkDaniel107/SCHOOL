@@ -8,5 +8,11 @@ def hello():
     return render_template('main.html')
 
 
+@app.route('/background_process_test')
+def background_process_test():
+    print("Hello")
+    return "nothing"
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8000)
