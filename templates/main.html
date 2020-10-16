@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <!-- basic.html -->
+    <title>School</title>
+    <meta charset = "UTF-8" />
+    <script>
+        $(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/background_process_test',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+    </script>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+          color: black;
+          text-align: center;
+        }
+
+        p {
+          font-family: verdana;
+          font-size: 20px;
+          color: gray;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Assign assignments</h1>
+        <p>Please put the assignment name here</p>
+        <input type = "text" id = "myText" value = ""/>
+        <p>Please put due date here</p>
+    </center>
+</body>
+</html>
